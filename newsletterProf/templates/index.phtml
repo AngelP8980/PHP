@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+    <main class="d-flex justify-content-center mt-5">
+        <form action="index.php" method="POST" class="col-3">
+
+            <!-- Affichage du message d'erreur le cas échéant -->
+            <?php if ($error != null): ?>
+                <p class="alert alert-danger"><?=htmlspecialchars($error);?></p>
+            <?php endif; ?>
+
+            <fieldset>
+                <legend>Abonnez-vous à notre newsletter</legend>
+                <div class="mb-3">
+                    <label for="email">Votre email</label>
+                    <input class="form-control" type="text" id="email" name="email" placeholder="toto@toto.com">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Valider">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
